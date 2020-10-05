@@ -1,11 +1,13 @@
 package cse360assignment02;
 
+
 public class AddingMachine {
   private int total;
+  private String history = "";
   
   public AddingMachine () {
     total = 0;  // not needed - included for clarity
-    string history = "";
+    
   }
   
   public int getTotal () {
@@ -14,12 +16,12 @@ public class AddingMachine {
   
   public void add (int value) {
     total += value;
-    history = history + " + " + total;
+    history = history + " + " + value;
   }
 
   public void subtract (int value) {
     total -= value;
-    history = history + " - " + total;
+    history = history + " - " + value;
   }
 
   public String toString () {
@@ -28,5 +30,6 @@ public class AddingMachine {
 
   public void clear() {
     history = "";
+    total = 0;
   }
 }
