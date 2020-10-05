@@ -5,22 +5,28 @@ public class AddingMachine {
   
   public AddingMachine () {
     total = 0;  // not needed - included for clarity
+    string history = "";
   }
   
   public int getTotal () {
-    return 0;
+    return total;
   }
   
   public void add (int value) {
+    total += value;
+    history = history + " + " + total;
   }
 
   public void subtract (int value) {
+    total -= value;
+    history = history + " - " + total;
   }
 
   public String toString () {
-    return "";
+    return "0" + history;
   }
 
   public void clear() {
+    history = "";
   }
 }
